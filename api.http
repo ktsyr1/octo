@@ -23,7 +23,7 @@ GET http://localhost:3000/api/
 content-type: application/json
 token: {{token}}
 ###
-GET http://localhost:3000/api/client/posts
+GET http://localhost:3000/api/client/posts/whatsapp-business1
 
 HTTP/1.1 200  - OK
 content-type: application/json; charset=utf-8
@@ -31,9 +31,9 @@ access-control-allow-origin: *
 access-control-allow-credentials: true
 x-requested-with: NEXTJS
 access-control-allow-headers: Origin, Content-Type, Accept
-etag: "3oj5sw12bdb0"
+etag: "ncojkkx51l6p"
 vary: Accept-Encoding
-date: Sat, 19 Aug 2023 17:09:14 GMT
+date: Sat, 19 Aug 2023 17:59:39 GMT
 content-encoding: gzip
 connection: close
 transfer-encoding: chunked
