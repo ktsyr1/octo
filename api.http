@@ -22,14 +22,8 @@ content-type: application/json
 GET http://localhost:3000/api/
 content-type: application/json
 token: {{token}}
-
-
-HTTP/1.1 308  - Permanent Redirect
-location: /api
-refresh: 0;url=/api
-date: Fri, 18 Aug 2023 15:48:05 GMT
-connection: close
-transfer-encoding: chunked
+###
+GET http://localhost:3000/api/client/posts
 
 HTTP/1.1 200  - OK
 content-type: application/json; charset=utf-8
@@ -37,9 +31,9 @@ access-control-allow-origin: *
 access-control-allow-credentials: true
 x-requested-with: NEXTJS
 access-control-allow-headers: Origin, Content-Type, Accept
-etag: "105n3z3e6ube"
+etag: "3oj5sw12bdb0"
 vary: Accept-Encoding
-date: Fri, 18 Aug 2023 15:48:07 GMT
+date: Sat, 19 Aug 2023 17:09:14 GMT
 content-encoding: gzip
 connection: close
 transfer-encoding: chunked

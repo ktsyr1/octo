@@ -4,14 +4,6 @@ import jwt from 'jsonwebtoken'
 import { API, APIAuth, EmailSender } from "@/lib/app";
 import nodemailer from 'nodemailer';
 
-/**
-* 
-* @route {"/auth"}  
-* @method {POST} signup   
-* @method {PUT} login   
-* 
-*/
-
 export default async function auth(req, res, next) {
 
         let secret = process.env.secret || "dev"
@@ -48,7 +40,7 @@ export default async function auth(req, res, next) {
 
                         Send({ token, admin: findEmail.isAdmin, msg: "تم تغيير كلمة السر " })
                 })
-                // login build
+        // login build
         PUT(
                 await Auth.isLogin(),
                 async () => {
