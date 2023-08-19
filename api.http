@@ -1,0 +1,45 @@
+GET http://localhost:3000/api/admin/posts 
+###
+PATCH    http://localhost:3000/api/admin/users 
+content-type: application/json
+{
+"email":"ktsyr1234@gmail.com"
+}
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt0c3lyMTIzNEBnbWFpbC5jb20iLCJleHAiOjE2OTIxOTkzMDQsImlhdCI6MTY5MTU5NDUwNH0.Txa5hr89CRTgjyI_2Lb_8ZHqSfEHHThbkS7h41-v0NQ
+
+POST http://localhost:3000/api/auth
+content-type: application/json
+
+{
+    "fullname": "ktsyr1",
+    "password": "0000",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt0c3lyLjFAZ21haWwuY29tIiwiZXhwIjoxNjkyOTU0ODg4LCJpYXQiOjE2OTIzNTAwODh9.wXJ4LnVLz3JNgLmuSs0jucsLQmKmayTwfDsJ7cRo-9Q"
+}
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt0c3lyMTIzNEBnbWFpbC5jb20iLCJleHAiOjE2OTIxOTkzMDQsImlhdCI6MTY5MTU5NDUwNH0.Txa5hr89CRTgjyI_2Lb_8ZHqSfEHHThbkS7h41-v0NQ
+
+GET http://localhost:3000/api/
+content-type: application/json
+token: {{token}}
+
+
+HTTP/1.1 308  - Permanent Redirect
+location: /api
+refresh: 0;url=/api
+date: Fri, 18 Aug 2023 15:48:05 GMT
+connection: close
+transfer-encoding: chunked
+
+HTTP/1.1 200  - OK
+content-type: application/json; charset=utf-8
+access-control-allow-origin: *
+access-control-allow-credentials: true
+x-requested-with: NEXTJS
+access-control-allow-headers: Origin, Content-Type, Accept
+etag: "105n3z3e6ube"
+vary: Accept-Encoding
+date: Fri, 18 Aug 2023 15:48:07 GMT
+content-encoding: gzip
+connection: close
+transfer-encoding: chunked
