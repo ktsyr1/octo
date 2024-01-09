@@ -22,13 +22,11 @@ export default function PageOne({ data : propsData }) {
     // let dddd = { "cat": ["اعلان"], "create_at": 1704743697091, }
     return (
         <div className="box col m-20 p-20 " style={{ maxWidth: '700px', margin: 'auto' }} >
-            <img src={data?.image} alt={data?.title} style={{ borderRadius: '20px' }} />
+            {/* <img src={data?.image} alt={data?.title} style={{ borderRadius: '20px' }} />
 
-            {/* content */}
             <h1 className="py-10">{data.title}</h1>
             <p className="p-10 my-10" style={{ backgroundColor: '#eee', borderRadius: '10px' }}>{data.bio}</p>
-            {/* view md  */}
-            <div dangerouslySetInnerHTML={{ __html: md.render(data.content) }} />
+            <div dangerouslySetInnerHTML={{ __html: md.render(data.content) }} /> */}
         </div>
     )
 }
