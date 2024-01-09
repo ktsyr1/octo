@@ -82,8 +82,8 @@ export function Footer() {
                     <i className="lni lni-chevron-up"></i>
                 </Link>
                 {/* <!-- ======== JS here ======== --> */}
-                <Script src="assets/js/bootstrap.bundle.min.js"></Script>
-                <Script src="assets/js/wow.min.js"></Script>
+                <Script src="/assets/js/bootstrap.bundle.min.js"></Script>
+                <Script src="/assets/js/wow.min.js"></Script>
             </footer>
         </>
     )
