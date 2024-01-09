@@ -36,7 +36,7 @@ export default function Login() {
 
     }
     return (
-        <form >
+        <form className="form" >
             <h1>تسجيل الدخول</h1>
             <Input title="الايميل" name='email' onChange={set} />
             <Input title="كلمة السر" type="password" name='password' onChange={set} />

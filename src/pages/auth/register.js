@@ -33,7 +33,7 @@ export default function Signup() {
         } else message.error("غير متاح لك التسجيل")
     }
     return (
-        <form className='bord box col p-20 center ' onSubmit={handleSubmit(onSubmit)}>
+        <form className='bord box col p-20 center form ' onSubmit={handleSubmit(onSubmit)}>
             <h1>التسجيل</h1>
             <label htmlFor="fullname"  >الاسم الكامل </label>
             <input type="text" id="fullname" {...register("fullname")} />

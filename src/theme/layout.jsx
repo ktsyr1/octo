@@ -1,6 +1,5 @@
-import Cookies from 'js-cookie'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
+ 
+import { Footer } from './footer'
 import { NavHeader } from './nav'
 
 export default function RootLayout({ children }) {
@@ -8,8 +7,8 @@ export default function RootLayout({ children }) {
         <>
             <NavHeader links={[
                 { link: "/", label: "الصفحة الرئيسية" },
-                { link: "/page/diploma", label: "الدبلومة" },
-                { link: "/QA", label: "سؤال وجواب" },
+                { link: "/#service", label: "الخدمات" },
+                { link: "/blog", label: "المدونة" },
                 { link: "/admin", label: "لوحة التحكم", ok: true },
             ]
 
@@ -17,6 +16,7 @@ export default function RootLayout({ children }) {
             <article >
                 {children}
             </article>
+            <Footer />
         </>
     )
-}
+} 

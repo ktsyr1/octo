@@ -14,8 +14,8 @@ export default function adminHome() {
                     { title: "المستخدمين", url: "/admin/users", src: "/icons/users.svg" },
                     { title: "المنشورات", url: "/admin/posts", src: "/icons/posts.svg" },
                 ].map((a) => (
-                    <Link href={a.url} className="m-10 p-20 bord w-300 box row aitem" key={a.src}  >
-                        <img src={a.src} className="w-50 ml-10" />
+                    <Link href={a.url} className="m-10 p-20 bord w-300 box rows aitem" key={a.src}  >
+                        <img src={a.src} className="  ml-10" style={{width: '50px'}} />
                         <p>{a.title}</p>
 
                     </Link>

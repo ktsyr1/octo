@@ -30,7 +30,7 @@ export default function Login() {
     }
     return (
         <div>
-            <form >
+            <form  className="form" >
                 <h1>   نسيت كلمة السر</h1>
                 <Input title="الايميل" name='email' onChange={set} />
                 <button onClick={send} className="mt-20">ارسال  </button>

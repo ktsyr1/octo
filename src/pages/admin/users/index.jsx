@@ -7,7 +7,8 @@ import Image from 'next/image';
 import { AuthServerSide } from '@/lib/app2'
 
 export async function getServerSideProps(ctx) {
-	return AuthServerSide(ctx, async (cookies, query, config, NEXT_PUBLIC_API) => {
+	return AuthServerSide(ctx, async ({ config, NEXT_PUBLIC_API }) => {
+		// console.log(config);
 		let url = `${NEXT_PUBLIC_API}/admin/users`
 		let { data } = await axios.get(url, config);
 
@@ -46,7 +47,7 @@ export default function AdminUsers(props) {
 					<p>الايميل</p>
 					<input type="email" id="email" {...register("email")} />
 
-					<div className=" box row my-15" style={{ textAlign: "start" }}>
+					<div className=" box rows my-15" style={{ textAlign: "start" }}>
 						<dev className="btn off w-full ml-10" onClick={() => setInvite(false)} >الغاء </dev>
 						<input type='submit' className="mr-10 w-full" />
 					</div>
@@ -60,21 +61,17 @@ export default function AdminUsers(props) {
 		{
 			title: "الخيارات", dataIndex: "delete", key: "delete",
 			render: (_, record) => (
-				<div className="box row">
-					{/* <Link href={`/admin/users/${record._id}`} className="btn ml-10 w-50 box j m-5" >edit</Link> */}
-					<Popconfirm
-						title="  أنت متأكدة من  حذف المستخدم"
-						onConfirm={() => Delete(record._id)}
-						okText="نعم"
-						cancelText="لا"
-					>
-						<button className="mr-10 green ml-10 box aitem" >
-							<Image src={"/icons/delete.svg"} width={20} height={20} alt="icon" />
-							<p className="mx-10">     حذف المستخدم </p>
-						</button>
-					</Popconfirm>
-
-				</div>
+				<Popconfirm
+					title="  أنت متأكدة من  حذف المستخدم"
+					onConfirm={() => Delete(record._id)}
+					okText="نعم"
+					cancelText="لا"
+				>
+					<button className="mr-10 green ml-10 box aitem" >
+						<Image src={"/icons/delete.svg"} width={20} height={20} alt="icon" />
+						<p className="mx-10">     حذف المستخدم </p>
+					</button>
+				</Popconfirm>
 			)
 		},
 
@@ -82,7 +79,7 @@ export default function AdminUsers(props) {
 	return (
 		<section className="bord m-10 p-10 box col  ">
 			<LineHeader data={[]} />
-			<div className="box row p-20">
+			<div className="box rows p-20">
 				<h1 className="ml-20">المستخدمين</h1>
 				<button onClick={() => setInvite(true)} >دعوة </button>
 			</div>

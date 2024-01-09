@@ -49,15 +49,13 @@ export default function NewPassword() {
             message.error("كلمات المرور غير متطابقة", "err")
         }
     }
-    return (
-        <div>
-            <form >
+    return ( 
+            <form  className="form" >
                 <h1>   تغيير كلمة السر</h1>
                 <Input title="كلمة السر الجديدة" type='password' name='password' onChange={set} />
                 <Input title="اعادة كلمة السر الجديدة" type='password' name='repassword' onChange={set} />
 
                 <button onClick={send} className="mt-20">ارسال  </button>
-            </form>
-        </div>
+            </form> 
     )
 }
