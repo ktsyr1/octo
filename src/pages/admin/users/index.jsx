@@ -43,9 +43,9 @@ export default function AdminUsers(props) {
 					style={{ top: '170px', right: '0', left: '0', zIndex: 1 }}
 					onSubmit={handleSubmit(onSubmit)}
 				>
-					<h1>دعوة ادمن</h1>
+					<h3 style={{ textAlign: 'center' }}>دعوة ادمن</h3>
 					<p>الايميل</p>
-					<input type="email" id="email" {...register("email")} />
+					<input type="email" id="email" {...register("email")} className="w-full" />
 
 					<div className=" box rows my-15" style={{ textAlign: "start" }}>
 						<dev className="btn off w-full ml-10" onClick={() => setInvite(false)} >الغاء </dev>

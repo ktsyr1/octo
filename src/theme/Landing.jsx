@@ -1,7 +1,8 @@
 import { NavHeader } from "@/theme/nav";
 import { IconCode, IconDigitalMarketing, IconMobile, IconTranslate, IconVE, Icondesign } from "./icons";
+import Link from "next/link";
 
-export function Landing() {
+export function Landing({ data }) {
     return (
         <>
             {/* <!-- ======== hero-section start ======== --> */}
@@ -33,7 +34,24 @@ export function Landing() {
                     </div>
                 </div>
             </section>
+
             <Service />
+            <div className="row justify-content-center">
+                <div className="col-xxl-5 col-xl-6 col-lg-8 col-md-9">
+                    <div className="section-title text-center mb-60">
+                        <h2 className="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                            احدث المقالات
+                        </h2>
+                        {/* <p className="wow fadeInUp" data-wow-delay=".4s">
+                                مجموعة خدمات تنطلق بمشروعك من البداية حتى مراحل نجاح واستمرار المشروع
+                            </p> */}
+                    </div>
+                </div>
+            </div>
+            <div className="box grid aitem j">
+                {data.map(a => <Card data={a} key={a._id} />)}
+            </div>
+
             {/* <!-- ======== hero-section end ======== --> */}
 
             {/* <!-- ======== feature-section start ======== --> */}
@@ -281,7 +299,7 @@ function Service() {
                     <div className="col-lg-4 col-md-6">
                         <div className="single-feature-extended">
                             <div className="icon j box">
-                                <IconTranslate size={60} /> 
+                                <IconTranslate size={60} />
                             </div>
                             <div className="content box col  aitem">
                                 <h3>الترجمة</h3>
@@ -309,5 +327,18 @@ function Service() {
                 </div>
             </div>
         </section>
+    )
+}
+function Card({ data }) {
+    return (
+        <Link href={`/blog/${data.url}`} style={{
+            width: '300px',
+            display: 'flex',
+            flexDirection: 'column',
+            margin: '10px'
+        }}>
+            <img src={data.image} alt={data.title} style={{ borderRadius: '20px' }} />
+            <b className="p-10  ">{data.title}</b>
+        </Link>
     )
 }

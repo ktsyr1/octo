@@ -1365,10 +1365,10 @@ p {
 
 /* ======= footer css ======= */
 .footer {
-  background-image: url("../img/footer/footer-bg.svg");
+  background-color: #112465;
   background-size: cover;
   background-position: top right;
-  padding-top: 260px;
+  padding-top: 100px;
   margin-top: 100px;
 }
 
@@ -1381,7 +1381,7 @@ p {
 @media (max-width: 767px) {
   .footer {
     padding-top: 120px;
-    background: #5864FF;
+    background: #122563;
   }
 }
 
