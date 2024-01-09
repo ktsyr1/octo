@@ -22,7 +22,7 @@ export default function PageOne({ data }) {
     }
     return (
         <div className="box col m-20 " style={{ maxWidth: '700px', margin: 'auto' }} >
-            <img src={data.image} alt={data.title} style={{ borderRadius: '20px' }} />
+            <img src={data?.image} alt={data?.title} style={{ borderRadius: '20px' }} />
 
             {/* content */}
             <h1 className="py-10">{data.title}</h1>
