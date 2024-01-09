@@ -25,8 +25,8 @@ export default function PageOne({ data : propsData }) {
          <img src={data?.image} alt={data?.title} style={{ borderRadius: '20px' }} />
    
             <h1 className="py-10">{data?.title}</h1>
-            <p className="p-10 my-10" style={{ backgroundColor: '#eee', borderRadius: '10px' }}>{data.bio}</p>
-            <div dangerouslySetInnerHTML={{ __html: md.render(data.content) }} />
+            <p className="p-10 my-10" style={{ backgroundColor: '#eee', borderRadius: '10px' }}>{data?.bio}</p>
+            <div dangerouslySetInnerHTML={{ __html: md.render(data.content ||" ") }} />
         </div>
     )
 }
