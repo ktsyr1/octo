@@ -13,7 +13,7 @@ export function Footer() {
                                 <div className="footer-widget">
                                     <div className="logo mb-30">
                                         <Link href="/">
-                                            <img src="/images/logo2.png" alt="" style={{ borderRadius: '30px' }} />
+                                            <img src="/icons/logo2.svg" alt=""   />
                                         </Link>
                                     </div>
                                     <p className="  mb-30 text-white">

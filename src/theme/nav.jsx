@@ -33,7 +33,7 @@ export function NavHeader({ links }) {
                                     <span className="toggler-icon"></span>
                                 </button>
                                 <Link className="navbar-brand mx-15" href="/">
-                                    <img src="/images/logo.png" alt="Logo" />
+                                    <img src="/icons/logo.svg" alt="Logo"   />
                                 </Link>
 
                                 <div
