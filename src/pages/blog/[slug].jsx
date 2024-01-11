@@ -26,7 +26,7 @@ export default function PageOne({ data : propsData }) {
    
             <h1 className="py-10">{data?.title}</h1>
             <p className="p-10 my-10" style={{ backgroundColor: '#eee', borderRadius: '10px' }}>{data?.bio}</p>
-            <div dangerouslySetInnerHTML={{ __html: md.render(data.content ||" ") }} />
+            {/* <div dangerouslySetInnerHTML={{ __html: md.render(data.content ||" ") }} /> */}
         </div>
     )
 }
