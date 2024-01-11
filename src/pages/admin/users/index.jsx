@@ -80,7 +80,7 @@ export default function AdminUsers(props) {
 		<section className="bord m-10 p-10 box col  ">
 			<LineHeader data={[]} />
 			<div className="box rows p-20">
-				<h1 className="ml-20">المستخدمين</h1>
+				<h1 className="ml-20 my-0">المستخدمين</h1>
 				<button onClick={() => setInvite(true)} >دعوة </button>
 			</div>
 
