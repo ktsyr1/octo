@@ -40,23 +40,22 @@ content-encoding: gzip
 connection: close
 transfer-encoding: chunked
 ###
-GET http://localhost:3000/api/client/posts
+GET http://localhost:3000/api/client/
 
-HTTP/1.1 200  - OK
-content-type: application/json; charset=utf-8
-access-control-allow-origin: *
-access-control-allow-methods: GET,POST,DELETE
-access-control-allow-credentials: true
-access-control-allow-headers: Origin, Content-Type, Accept
-x-content-type-options: nosniff
-x-frame-options: DENY
-x-xss-protection: 1; mode=block
-content-security-policy: default-src 'self'
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-referrer-policy: no-referrer
-etag: "11ykqmiarwgpj9f"
+HTTP/1.1 308  - Permanent Redirect
+location: /api/client
+refresh: 0;url=/api/client
+date: Mon, 22 Jan 2024 19:54:46 GMT
+connection: close
+transfer-encoding: chunked
+
+HTTP/1.1 500  - Internal Server Error
+cache-control: no-store, must-revalidate
+x-powered-by: Next.js
+etag: "13n5l284r7j35s"
+content-type: text/html; charset=utf-8
 vary: Accept-Encoding
-date: Sat, 20 Jan 2024 20:01:27 GMT
+date: Mon, 22 Jan 2024 19:54:46 GMT
 content-encoding: gzip
 connection: close
 transfer-encoding: chunked

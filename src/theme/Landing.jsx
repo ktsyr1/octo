@@ -20,23 +20,24 @@ export function Landing({ data }) {
             img: '/images/logo-sar.png',
         }
     ]
-function Camponys(){
-    return (
-        <div className="box grid mb-20 " style={{margin: '10px  auto',marginBottom: '50px',maxWidth: '700px'}}>
-            {
-                CamponysList.map((item, index) => {
-                    return (
-                        <div className="box col j aitem p-10" key={index}  data-wow-delay=".3s" >
-                                <img src={item.img} alt="" style={{width: '150px',borderRadius: '50%' ,margin: '10px'}} /> 
+    function Camponys() {
+        return (
+            <div className="box grid mb-20 " style={{ margin: '10px  auto', marginBottom: '50px', maxWidth: '700px' }}>
+                {
+                    CamponysList.map((item, index) => {
+                        return (
+                            <div className="box col j aitem p-10" key={index} data-wow-delay=".3s" >
+                                <img src={item.img} alt="" style={{ width: '150px', borderRadius: '50%', margin: '10px' }} />
                                 <b> {item.title} </b>
-                        </div>
-                    )
-                })
-            }
-        </div>
-    )
-}
-    return (
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        )
+    }
+    if (!data) return <></>
+    else return (
         <>
             <section id="home" className="hero-section">
                 <div className="container">
@@ -89,10 +90,10 @@ function Camponys(){
                 <Link href={'/blog'} className="m-a btn" style={{ width: "150px" }} >المزيد</Link>
             </div>
             <br />
-            
-            <div className="row justify-content-center"> 
-                    <div className="section-title text-center">
-                        <h2 className="wow fadeInUp" data-wow-delay=".2s">الشركاء</h2> 
+
+            <div className="row justify-content-center">
+                <div className="section-title text-center">
+                    <h2 className="wow fadeInUp" data-wow-delay=".2s">الشركاء</h2>
                 </div>
             </div>
             <Camponys />
