@@ -9,8 +9,8 @@ export default async function ClientPosts(req, res, next) {
             let posts = await Posts.find()
                 .sort({ _id: -1 })
                 .select("title url image")
-                .limit(6)
-            app.Send(posts)            
+                .limit(3)
+            app.Send(posts)
         })
 }
 

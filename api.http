@@ -17,23 +17,46 @@ content-type: application/json
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt0c3lyLjFAZ21haWwuY29tIiwiZXhwIjoxNjkyOTU0ODg4LCJpYXQiOjE2OTIzNTAwODh9.wXJ4LnVLz3JNgLmuSs0jucsLQmKmayTwfDsJ7cRo-9Q"
 }
 ###
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imt0c3lyMTIzNEBnbWFpbC5jb20iLCJleHAiOjE2OTIxOTkzMDQsImlhdCI6MTY5MTU5NDUwNH0.Txa5hr89CRTgjyI_2Lb_8ZHqSfEHHThbkS7h41-v0NQ
 
-GET http://localhost:3000/api/
+GET http://localhost:3000/api/client/posts/3421
 content-type: application/json
-token: {{token}}
-###
-GET http://localhost:3000/api/client/posts/whatsapp-business1
 
 HTTP/1.1 200  - OK
 content-type: application/json; charset=utf-8
 access-control-allow-origin: *
+access-control-allow-methods: GET,POST,DELETE
 access-control-allow-credentials: true
-x-requested-with: NEXTJS
 access-control-allow-headers: Origin, Content-Type, Accept
-etag: "ncojkkx51l6p"
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+content-security-policy: default-src 'self'
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+referrer-policy: no-referrer
+etag: "ebbpz9acanigmn"
 vary: Accept-Encoding
-date: Sat, 19 Aug 2023 17:59:39 GMT
+date: Fri, 19 Jan 2024 09:33:57 GMT
+content-encoding: gzip
+connection: close
+transfer-encoding: chunked
+###
+GET http://localhost:3000/api/client/posts
+
+HTTP/1.1 200  - OK
+content-type: application/json; charset=utf-8
+access-control-allow-origin: *
+access-control-allow-methods: GET,POST,DELETE
+access-control-allow-credentials: true
+access-control-allow-headers: Origin, Content-Type, Accept
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+content-security-policy: default-src 'self'
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+referrer-policy: no-referrer
+etag: "11ykqmiarwgpj9f"
+vary: Accept-Encoding
+date: Sat, 20 Jan 2024 20:01:27 GMT
 content-encoding: gzip
 connection: close
 transfer-encoding: chunked

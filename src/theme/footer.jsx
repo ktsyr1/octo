@@ -45,6 +45,11 @@ export function Footer() {
                                                 <i className="lni lni-youtube"></i>
                                             </Link>
                                         </li>
+                                        <li>
+                                            <Link href="https://x.com/octo-tech">
+                                                <i className="lni lni-youtube"></i>
+                                            </Link>
+                                        </li>
                                         <div></div>
                                     </ul>
                                 </div>

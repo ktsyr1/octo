@@ -1,11 +1,43 @@
-import { NavHeader } from "@/theme/nav";
-import { IconCode, IconDigitalMarketing, IconMobile, IconTranslate, IconVE, Icondesign } from "./icons";
+import Card from "./card";
+import { IconMobile, IconTranslate, IconVE, } from "./icons";
 import Link from "next/link";
 
 export function Landing({ data }) {
+    // شركة Accept Education للخدمات
+    // جامعة الزيتونة الدولية
+    // اتحاد طلبة سوريا
+    let CamponysList = [
+        {
+            title: 'شركة Accept Education',
+            img: '/images/logo-accept.png',
+        },
+        {
+            title: 'جامعة الزيتونة الدولية',
+            img: '/images/logo-zaitun.png',
+        },
+        {
+            title: 'اتحاد طلبة سوريا',
+            img: '/images/logo-sar.png',
+        }
+    ]
+function Camponys(){
+    return (
+        <div className="box grid mb-20 " style={{margin: '10px  auto',marginBottom: '50px',maxWidth: '700px'}}>
+            {
+                CamponysList.map((item, index) => {
+                    return (
+                        <div className="box col j aitem p-10" key={index}  data-wow-delay=".3s" >
+                                <img src={item.img} alt="" style={{width: '150px',borderRadius: '50%' ,margin: '10px'}} /> 
+                                <b> {item.title} </b>
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
+}
     return (
         <>
-            {/* <!-- ======== hero-section start ======== --> */}
             <section id="home" className="hero-section">
                 <div className="container">
                     <div className="row align-items-center position-relative">
@@ -36,6 +68,7 @@ export function Landing({ data }) {
             </section>
 
             <Service />
+
             <div className="row justify-content-center">
                 <div className="col-xxl-5 col-xl-6 col-lg-8 col-md-9">
                     <div className="section-title text-center mb-60">
@@ -48,175 +81,21 @@ export function Landing({ data }) {
                     </div>
                 </div>
             </div>
+
             <div className="box grid aitem j">
-                {data.map(a => <Card data={a} key={a._id} />)}
+                {data?.map(a => <Card data={a} key={a._id} />)}
             </div>
-
-            {/* <!-- ======== hero-section end ======== --> */}
-
-            {/* <!-- ======== feature-section start ======== --> */}
-            {/* <section id="features" className="feature-section pt-120">
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-4 col-md-8 col-sm-10">
-                            <div className="single-feature">
-                                <div className="icon">
-                                    <IconCode size={60}/>
-                                </div>
-                                <div className="content">
-                                    <h3>Bootstrap 5</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                        diam nonumy eirmod tempor invidunt ut labore
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-8 col-sm-10">
-                            <div className="single-feature">
-                                <div className="icon">
-                                    <Icondesign size={60} />
-                                </div>
-                                <div className="content">
-                                    <h3>Clean Design</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                        diam nonumy eirmod tempor invidunt ut labore
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-8 col-sm-10">
-                            <div className="single-feature">
-                                <div className="icon">
-                                    <IconDigitalMarketing size={60} /> 
-                                </div>
-                                <div className="content">
-                                    <h3>Easy to Use</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                        diam nonumy eirmod tempor invidunt ut labore
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div className="w-full box ">
+                <Link href={'/blog'} className="m-a btn" style={{ width: "150px" }} >المزيد</Link>
+            </div>
+            <br />
+            
+            <div className="row justify-content-center"> 
+                    <div className="section-title text-center">
+                        <h2 className="wow fadeInUp" data-wow-delay=".2s">الشركاء</h2> 
                 </div>
-            </section> */}
-            {/* <!-- ======== feature-section end ======== --> */}
-
-            {/* <!-- ======== about-section start ======== --> */}
-            {/* <section id="about" className="about-section pt-150">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-xl-6 col-lg-6">
-                            <div className="about-img">
-                                <img src="assets/img/about/about-1.png" alt="" className="w-100" />
-
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6">
-                            <div className="about-content">
-                                <div className="section-title mb-30">
-                                    <h2 className="mb-25 wow fadeInUp" data-wow-delay=".2s">
-                                        Perfect Solution Thriving Online Business
-                                    </h2>
-                                    <p className="wow fadeInUp" data-wow-delay=".4s">
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                        dinonumy eirmod tempor invidunt ut labore et dolore magna
-                                        aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                                        sea takimata sanctus est Lorem.Lorem ipsum dolor sit amet.
-                                    </p>
-                                </div>
-                                <a
-                                    href="javascript:void(0)"
-                                    className="main-btn btn-hover border-btn wow fadeInUp"
-                                    data-wow-delay=".6s"
-                                >Discover More</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-            {/* <!-- ======== about-section end ======== -->
-
-    <!-- ======== about2-section start ======== --> */}
-            {/* <section id="about" className="about-section pt-150">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-xl-6 col-lg-6">
-                            <div className="about-content">
-                                <div className="section-title mb-30">
-                                    <h2 className="mb-25 wow fadeInUp" data-wow-delay=".2s">
-                                        Easy to Use with Tons of Awesome Features
-                                    </h2>
-                                    <p className="wow fadeInUp" data-wow-delay=".4s">
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                        diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                                        aliquyam erat, sed diam voluptua.
-                                    </p>
-                                </div>
-                                <ul>
-                                    <li>Quick Access</li>
-                                    <li>Easily to Manage</li>
-                                    <li>24/7 Support</li>
-                                </ul>
-                                <a
-                                    href="javascript:void(0)"
-                                    className="main-btn btn-hover border-btn wow fadeInUp"
-                                    data-wow-delay=".6s"
-                                >Learn More</a
-                                >
-                            </div>
-                        </div>
-                        <div className="col-xl-6 col-lg-6 order-first order-lg-last">
-                            <div className="about-img-2">
-                                <img src="assets/img/about/about-2.png" alt="" className="w-100" />
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-            {/* <!-- ======== about2-section end ======== -->
-
-    <!-- ======== feature-section start ======== --> */}
-
-            {/* <!-- ======== feature-section end ======== -->
-
-    <!-- ======== subscribe-section start ======== --> */}
-            {/* <section id="contact" className="subscribe-section pt-120">
-                <div className="container">
-                    <div className="subscribe-wrapper img-bg">
-                        <div className="row align-items-center">
-                            <div className="col-xl-6 col-lg-7">
-                                <div className="section-title mb-15">
-                                    <h2 className="text-white mb-25">Subscribe Our Newsletter</h2>
-                                    <p className="text-white pr-5">
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                                        diam nonumy eirmod tempor
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-xl-6 col-lg-5">
-                                <form action="#" className="subscribe-form">
-                                    <input
-                                        type="email"
-                                        name="subs-email"
-                                        id="subs-email"
-                                        placeholder="Your Email"
-                                    />
-                                    <button type="submit" className="main-btn btn-hover">
-                                        Subscribe
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
+            </div>
+            <Camponys />
         </>
     )
 }
@@ -327,18 +206,5 @@ function Service() {
                 </div>
             </div>
         </section>
-    )
-}
-function Card({ data }) {
-    return (
-        <Link href={`/blog/${data.url}`} style={{
-            width: '300px',
-            display: 'flex',
-            flexDirection: 'column',
-            margin: '10px'
-        }}>
-            <img src={data.image} alt={data.title} style={{ borderRadius: '20px' }} />
-            <b className="p-10  ">{data.title}</b>
-        </Link>
     )
 }

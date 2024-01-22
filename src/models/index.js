@@ -15,10 +15,11 @@ export const connect = async () => {
 }
 
 // DBmodels
+connect()
+
 
 import user from "@/models/user";
 export const User = user
-// export const User = import("@/models/user")
 
 import posts from "@/models/posts";
 export const Posts = posts

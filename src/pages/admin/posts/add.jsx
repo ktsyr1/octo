@@ -15,21 +15,28 @@ export default function AddPost({ config, query }) {
     // let [Data, setData] = useState({})
     const { register, handleSubmit } = useForm();
     const onSubmit = res => {
-        let image = ITS(res.image)
-        delete res.image
-        let data = { ...res, image }
+        const file = res.image//.files[0];
+        let image = null
+        function send(image) {
+            let data = { ...res, image }
+            axios.post('/api/admin/posts', data, config)
+                .then(({ data }) => {
+                    // alert
+                    message.success("تم اضافة المنشور")
+                    route.push('/admin/posts')
+                })
+        }
+        if (file.length > 0) {
+            const reader = new FileReader();
+            reader.onloadend = () => send(reader.result)
+            reader.readAsDataURL(file[0]);
+        } else send(image)
 
-        // send data to the server
-        axios.post('/api/admin/posts', data, config)
-            .then(({ data }) => {
-                // alert
-                message.success("تم اضافة المنشور")
-                route.push('/admin/posts')
-            })
     }
+    
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit) }  className="form" >
+            <form onSubmit={handleSubmit(onSubmit)} className="form" >
                 <h1>اضافة منشور</h1>
                 <label htmlFor="title"  >العنوان</label>
                 <input type="text" id="title" {...register("title")} />
@@ -54,8 +61,8 @@ export default function AddPost({ config, query }) {
                     <button onClick={(e) => {
                         e.preventDefault()
                         route.back()
-                    }} className="ml-10 btn p-10 m-0 off" style={{width: '45%'}}   >عودة </button>
-                    <button type="submit"  style={{width: '45%'}} >اضافة</button>
+                    }} className="ml-10 btn p-10 m-0 off" style={{ width: '45%' }}   >عودة </button>
+                    <button type="submit" style={{ width: '45%' }} >اضافة</button>
                 </div>
             </form>
         </div>
