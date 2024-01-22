@@ -27,8 +27,8 @@ export default function PageOne({ data: propsData }) {
 
             <h1 className="py-10">{data?.title}</h1>
             <div className=" box rows">
-                {/* icon date */}
-                <span>{new Date(data.create_at).toDateString()}</span>
+                {/* icon date 
+                <span>{new Date(data.create_at).toDateString()}</span>*/}
                 {/* icon cat */}
                 {data?.cat?.map(App => <Link href={`/blog/cat/${App}`} key={App} className="mx-10">{App}</Link>)}
             </div>
