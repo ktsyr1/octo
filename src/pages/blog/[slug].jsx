@@ -37,7 +37,7 @@ export default function PageOne({ data: propsData }) {
             <hr />
             <h2 >مقالات ذات صلة</h2>
             <div className="box grid">
-                {data.reletad?.map(post => <Card data={post} key={post._id} />)}
+                {data?.reletad?.map(post => <Card data={post} key={post._id} />)}
 
             </div>
         </div>
