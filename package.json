@@ -27,7 +27,7 @@
     "mongoose": "^7.6.8",
     "next": "13.4.1",
     "next13-progressbar": "^1.0.3",
-    "nextjs-vip": "^1.0.19",
+    "nextjs-vip": "^1.0.20",
     "nodemailer": "^6.9.3",
     "nprogress": "^0.2.0",
     "react": "18.2.0",
