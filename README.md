@@ -12,3 +12,13 @@ Email="email@gmail.com"
 Pass="password_email"
 ``````
 using mongodb atlas
+
+
+## notes
+```html
+<i class="fa-solid fa-tag"></i>
+
+
+<i class="fa-regular fa-clock"></i>
+
+```
