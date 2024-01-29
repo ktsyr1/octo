@@ -46,8 +46,8 @@ export function Footer() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="https://x.com/octopu_tech">
-                                                <i className="lni lni-youtube"></i>
+                                            <Link href="https://x.com/octopu_tech"> 
+                                                <i class="fa-brands fa-twitter"></i>
                                             </Link>
                                         </li>
                                         <div></div>
