@@ -47,7 +47,7 @@ export function Footer() {
                                         </li>
                                         <li>
                                             <Link href="https://x.com/octopu_tech"> 
-                                                <i class="fa-brands fa-twitter"></i>
+                                                <i class="lni lni-twitter"></i>
                                             </Link>
                                         </li>
                                         <div></div>
