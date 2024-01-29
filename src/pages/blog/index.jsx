@@ -13,7 +13,7 @@ export default function Home({ data }) {
             <p> افضل المقالات المختارة بعناية المخصصة لك من كل العلوم برمجة وتصميم و الاخبار التقنية  والكثير لك </p>
             <br />
             <div className="box grid j m-20">
-                {data.map(post => <Card data={post} />)}
+                {data.map(post => <Card data={post} key={post?.slug} /> )}
             </div>
         </div>
     )
