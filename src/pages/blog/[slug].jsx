@@ -38,7 +38,7 @@ export default function PageOne({ data: propsData }) {
                 {data?.cat?.map(App => <Link href={`/blog/cat/${App}`} key={App} className="mx-10">{App}</Link>)}
             </div>
             <p className="p-10 my-10" style={{ backgroundColor: '#eee', borderRadius: '10px' }}>{data?.bio}</p>
-            <div dangerouslySetInnerHTML={{ __html: data.content }} />
+            <div dangerouslySetInnerHTML={{ __html: data?.content }} />
             <hr />
             <h2 >مقالات ذات صلة</h2>
             <div className="box grid">
