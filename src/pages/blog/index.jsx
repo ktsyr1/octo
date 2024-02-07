@@ -1,8 +1,6 @@
 import Card from '@/theme/card';
 import axios from 'axios';
-import Link from 'next/link';
-
-export const getStaticProps = async ({ query }) => {
+export async function getServerSideProps(){
     let { data } = await axios.get(`${process.env.NEXT_PUBLIC_API}/client/posts`);
     return { props: { data } }
 }
