@@ -1,9 +1,11 @@
 import Card from '@/theme/card';
 import axios from 'axios';
+
 export async function getServerSideProps(){
     let { data } = await axios.get(`${process.env.NEXT_PUBLIC_API}/client/posts`);
     return { props: { data } }
 }
+
 export default function Home({ data }) {
     return (
         <div className='box col j aitem' >
