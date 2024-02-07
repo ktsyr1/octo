@@ -18,7 +18,7 @@ export async function getStaticProps(ctx) {
     let { data } = await axios.get(`${api}/${encodeURI(ctx.params.slug)}`);
     let md = new MarkdownIt()
     data.content = md.render(data.content || " ")
-    data.create_at = new Date(data.create_at).toDateString()
+    data.create_at = new Date(data?.create_at).toDateString()
     return { props: { data }, revalidate: 10 * 60 }
 }
 
