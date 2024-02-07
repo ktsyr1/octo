@@ -34,8 +34,10 @@ export default function PageOne({ data: propsData }) {
                 {/* icon date  */}
                 <span className="mx-10">{data?.create_at}</span>
                 {/* icon cat */}
-                <IconTag size={20} />
-                {data?.cat?.map(App => <Link href={`/blog/cat/${App}`} key={App} className="mx-10">{App}</Link>)}
+                {data?.cat?.map(App => <Link href={`/blog/cat/${App}`} key={App} >
+                    <IconTag size={20} /> 
+                    <p className="mx-10">{App}</p> 
+                </Link>)}
             </div>
             <p className="p-10 my-10" style={{ backgroundColor: '#eee', borderRadius: '10px' }}>{data?.bio}</p>
             <div dangerouslySetInnerHTML={{ __html: data?.content }} />
