@@ -32,7 +32,7 @@ export default function PageOne({ data: propsData }) {
             <div className=" box rows aitem">
                 <Iconclock size={20} />
                 {/* icon date  */}
-                <span className="mx-10">{data.create_at}</span>
+                <span className="mx-10">{data?.create_at}</span>
                 {/* icon cat */}
                 <IconTag size={20} />
                 {data?.cat?.map(App => <Link href={`/blog/cat/${App}`} key={App} className="mx-10">{App}</Link>)}
