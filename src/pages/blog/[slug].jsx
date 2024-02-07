@@ -18,6 +18,7 @@ export async function getStaticProps(ctx) {
     let { data } = await axios.get(`${api}/${encodeURI(ctx.params.slug)}`);
     let md = new MarkdownIt()
     data.content = md.render(data.content || " ")
+    data.create_at = new Date(data.create_at).toDateString()
     return { props: { data }, revalidate: 10 * 60 }
 }
 
@@ -31,7 +32,7 @@ export default function PageOne({ data: propsData }) {
             <div className=" box rows aitem">
                 <Iconclock size={20} />
                 {/* icon date  */}
-                <span className="mx-10">{new Date(data.create_at).toDateString()}</span>
+                <span className="mx-10">{data.create_at}</span>
                 {/* icon cat */}
                 <IconTag size={20} />
                 {data?.cat?.map(App => <Link href={`/blog/cat/${App}`} key={App} className="mx-10">{App}</Link>)}
