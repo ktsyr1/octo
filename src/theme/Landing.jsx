@@ -18,6 +18,10 @@ export function Landing({ data }) {
         {
             title: 'اتحاد طلبة سوريا',
             img: '/images/logo-sar.png',
+        } ,
+        {
+            title: 'Middle East Academy',
+            img: '/images/11.png',
         }
     ]
     function Camponys() {
