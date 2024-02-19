@@ -26,7 +26,7 @@ export function Landing({ data }) {
     ]
     function Camponys() {
         return (
-            <div className="box grid mb-20 " style={{ margin: '10px  auto', marginBottom: '50px', maxWidth: '700px' }}>
+            <div className="box grid mb-20 " style={{ margin: '10px  auto', marginBottom: '50px', maxWidth: '900px' }}>
                 {
                     CamponysList.map((item, index) => {
                         return (
