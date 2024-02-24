@@ -26,3 +26,6 @@ export const Posts = posts
 
 import menu from "@/models/menu";
 export const Menu = menu
+
+import certificates from "@/models/Certificates";
+export const Certificates = certificates

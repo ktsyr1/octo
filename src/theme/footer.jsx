@@ -13,7 +13,7 @@ export function Footer() {
                                 <div className="footer-widget">
                                     <div className="logo mb-30">
                                         <Link href="/">
-                                            <img src="/icons/logo2.svg" alt=""   />
+                                            <img src="/icons/logo2.svg" alt="" />
                                         </Link>
                                     </div>
                                     <p className="  mb-30 text-white">
@@ -46,8 +46,8 @@ export function Footer() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="https://x.com/octopu_tech"> 
-                                                <i class="lni lni-twitter"></i>
+                                            <Link href="https://x.com/octopu_tech">
+                                                <i className="lni lni-twitter"></i>
                                             </Link>
                                         </li>
                                         <div></div>
