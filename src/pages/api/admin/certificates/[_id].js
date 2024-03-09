@@ -12,30 +12,30 @@ import API from "nextjs-vip";
 
 export default async function postOne(req, res, next) {
     let { body } = req
-    let { id, GET, PUT, DELETE, Send } = new API(req, res)
+    let app = new API(req, res)
     let Auth = new APIAuth(req, res)
 
-    GET(
+    app.get(
         await Auth.isLogin(),
         async () => {
             // types
-            let certificates = await Certificates.findOne(id)
-            Send(certificates)
+            let certificates = await Certificates.findOne(app.id)
+            app.Send(certificates)
         })
-    PUT(
+    app.put(
         await Auth.isLogin(),
         async () => {
             // types
 
-            await Certificates.updateOne(id, body)
-            Send({ msg: "تم تحديث الشهادة" })
+            await Certificates.updateOne(app.id, body)
+            app.Send({ msg: "تم تحديث الشهادة" })
         })
-    DELETE(
+    app.delete(
         await Auth.isLogin(),
         async () => {
             // types
-            await Certificates.deleteOne(id)
-            Send({ msg: "تم حذف الشهادة" })
+            await Certificates.deleteOne(app.id)
+            app.Send({ msg: "تم حذف الشهادة" })
 
         })
 

@@ -1,17 +1,16 @@
 import { Certificates } from "@/models";
 import { APIAuth } from "@/lib/app";
-import APIbeta from "nextjs-vip/beta";
+import APIbeta from "nextjs-vip/server";
 
 export default async function certificates(req, res, next) {
     let { body } = req
-    let app = new APIbeta(arguments) 
+    let app = new APIbeta(req, res) 
     let Auth = new APIAuth(req, res)
-
     app.get(
         await Auth.isLogin(),
-        async () => {
+        async () => { 
             // types
-            let certificates = await Certificates.find().sort({ _id: -1 })
+            let certificates = await Certificates.find().sort({ _id: -1 }) 
             app.Send(certificates)
 
         })

@@ -19,22 +19,12 @@ export default function AddPost({ data, config, query }) {
     const { register, handleSubmit } = useForm({ defaultValues: data });
     let route = useRouter()
     const onSubmit = res => {
-        const file = res.image//.files[0];
-        let image = null
-        function send(image) {
-            console.log(image);
-            let data = { ...res, image }
-            axios.put(`/api/admin/certificates/${query._id}`, data, config)
-                .then(({ data }) => {
-                    message.success(data.msg)
-                    route.push("/admin/certificates")
-                })
-        }
-        if (file.length > 0) {
-            const reader = new FileReader();
-            reader.onloadend = () => send(reader.result)
-            reader.readAsDataURL(file[0]);
-        } else send(image)
+
+        axios.put(`/api/admin/certificates/${query._id}`, res, config)
+            .then(({ data }) => {
+                message.success(data.msg)
+                route.push("/admin/certificates")
+            })
 
     }
     return (
@@ -45,7 +35,7 @@ export default function AddPost({ data, config, query }) {
 
             <label htmlFor="url"  >الرابط   </label>
             <input type="text" id="url" {...register("url")} />
- 
+
             <div className="box mt-20 mx-0 row space w-full">
                 <button onClick={(e) => {
                     e.preventDefault()

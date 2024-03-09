@@ -15,8 +15,7 @@ export default async function users(req, res, next) {
             let users = await User
                 .find()
                 .sort({ _id: -1 })
-                .select('fullname email wa  ')
-                console.log(users);
+                .select('fullname email wa  ') 
             Send(users)
         });
     PATCH(
@@ -38,7 +37,7 @@ export default async function users(req, res, next) {
                 let pass = process.env.Pass
 
                 const transporter = nodemailer.createTransport({ service: 'gmail', auth: { user, pass } });
-                let siteName = " انصفني"
+                let siteName = " octo tech"
                 let content = `
                                         <center>
                                                 <h3 >انت مدعو لتكون مسوؤل في موقع ${siteName}  </h3>

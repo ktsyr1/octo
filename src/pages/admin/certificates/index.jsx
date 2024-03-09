@@ -7,7 +7,7 @@ import { AuthServerSide } from "@/lib/app2";
 
 export async function getServerSideProps(ctx) {
 	return await AuthServerSide(ctx, async ({ NEXT_PUBLIC_API, config }) => {
-		let url = `${NEXT_PUBLIC_API}/admin/posts`
+		let url = `${NEXT_PUBLIC_API}/admin/certificates`
 		let { data } = await axios.get(url, config);
 
 		return { data, config, url }
@@ -37,13 +37,10 @@ export default function Posts(props) {
 	}
 	const columns = [
 		{
-			title: "الاسم", dataIndex: "title", key: "title",
-			render: (_, record) => <Link href={`/admin/posts/${record._id}/edit`} className="  w-50 box j" >{record.title}</Link>
-		}, {
-			title: "التصنيف", dataIndex: "cat", key: "cat",
-			render: (_, record) => <>{record?.cat?.map(a => a)}</>
+			title: "code", dataIndex: "code", key: "code",
+			render: (_, record) => <Link href={`/admin/certificates/${record._id}`} className="  w-50 box j" >{record.code}</Link>
 		},
-		{ title: " تاريخ الانشاء ", dataIndex: "create_at", key: "create_at", },
+		{ title: " تاريخ الانشاء ", dataIndex: "create_at", key: "create_at",render: (_, record) => <>{new Date(record.create_at).toDateString()}</> },
 		{ title: "حذف", dataIndex: "delete", key: "delete", render: (_, record) => <Btn id={record._id} /> }
 	];
 
@@ -54,7 +51,7 @@ export default function Posts(props) {
 			{/* header */}
 			<div className="aitem   box m-10 grid">
 				<h1> المنشورات</h1>
-				<Link href="/admin/posts/add" className="btn mx-10">اضافة منشور</Link>
+				<Link href="/admin/certificates/add" className="btn mx-10">اضافة منشور</Link>
 			</div>
 			{/* table */}
 			<Table dataSource={data} columns={columns} pagination={false} />

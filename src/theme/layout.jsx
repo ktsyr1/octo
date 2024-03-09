@@ -9,6 +9,7 @@ export default function RootLayout({ children }) {
                 { link: "/", label: "الصفحة الرئيسية" },
                 { link: "/#service", label: "الخدمات" },
                 { link: "/blog", label: "المدونة" },
+                { link: "/cert", label: "الشهادات" },
                 { link: "/admin", label: "لوحة التحكم", ok: true },
             ]
 
