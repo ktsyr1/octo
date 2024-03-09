@@ -15,7 +15,8 @@ export default async function ClientCertificates(req, res, next) {
         async () => {
             console.log(req.body);
             let certificates = await Certificates.findOne({ code: req?.body?.code })
-           
+            if (!certificates) certificates = { msg: "المعلومات غير صحيحة" };
+
             app.Send(certificates)
         }
     )
