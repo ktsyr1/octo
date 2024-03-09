@@ -26,7 +26,7 @@ export default function Home() {
             <p>  بامكانك الوصول لشهادتك وتحميلها من هذه الصفحة فقط ضع كود الشهادة </p>
             <br />
             <form className='box flex j m-auto rows w-100 my-4' >
-                <input type='text' placeholder="1234" onChange={e => setCode(e.target.value)} />
+                <input type='text' placeholder="ادخل الكود الخاص بك" onChange={e => setCode(e.target.value)} />
                 <input type='submit' value="عرض الشهادة " className='mx-2' onClick={Send} />
             </form>
             {data?.code && <iframe src={data?.url} style={{ maxWidth: 640, width: "100%", height: 480, margin: 10 }} allow="autoplay"></iframe>}
