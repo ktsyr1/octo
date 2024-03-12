@@ -32,6 +32,8 @@ export default function Home() {
             {data?.code && <iframe src={data?.url} style={{ maxWidth: 640, width: "100%", height: 480, margin: 10 }} allow="autoplay"></iframe>}
             {data?.msg && <p>{data.msg}</p>}
             <br />
+            <p>في حال واجهت اي مشكلة تواصل معنا عبر <a href='mailto:octotech.suupport@gmail.com'> octotech.suupport@gmail.com</a></p>
+            <br />
         </div>
     )
 } 
