@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
                     href="assets/img/favicon.png"
                 />
                 {/* <!-- Place favicon.ico in the root directory --> */}
-
+                <meta name="google-site-verification" content="mI0IWcGO7yUkQmiqVpn2xPyd4VFAbJDNJYcNLV0IMFI" />
                 {/* <!-- ======== CSS here ======== --> */}
             </Head>
             <Next13ProgressBar />
