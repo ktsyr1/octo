@@ -10,6 +10,7 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 import { Next13ProgressBar } from 'next13-progressbar';
+import { Analytics } from '@vercel/analytics/react';
 
 
 import '@/styles/style.sass'
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }) {
                 {/* <link rel="manifest" href="/manifest.json" /> */}
                 <meta charٍet="utf-8" />
                 <meta httpُquiv="x-ua-compatible" content="ie=edge" />
+                <Analytics />
 
                 <meta name="description" content="" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
