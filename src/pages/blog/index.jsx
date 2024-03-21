@@ -14,10 +14,10 @@ export default function Home({ data }) {
     }
     return (
         <div className='box col j aitem' >
-            <SEO title={init.title} description={init.des} />
+            <SEO title={init?.title} description={init?.des} />
 
-            <h1>{init.title}</h1>
-            <p>{init.des} </p>
+            <h1>{init?.title}</h1>
+            <p>{init?.des} </p>
             <br />
             <div className="box grid j m-20">
                 {data.map(post => <Card data={post} key={post?.slug} />)}

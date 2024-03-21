@@ -27,7 +27,7 @@ export default function PageOne({ data: propsData }) {
     let [data, setData] = useState(propsData)
     return (
         <div className="box col m-20 p-20 " style={{ maxWidth: '700px', margin: 'auto' }} >
-            <SEO title={data.title} description={data.des} image={data.image} />
+            <SEO title={data?.title} description={data?.des} image={data?.image} />
 
             <img src={data?.image} alt={data?.title} style={{ borderRadius: '20px' }} />
 
