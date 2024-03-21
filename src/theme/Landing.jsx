@@ -1,5 +1,5 @@
 import Card from "./card";
-import { IconMobile, IconTranslate, IconVE, } from "./icons";
+import { IconInteriorDesign, IconMicroController, IconMobile, IconTranslate, IconVE, } from "./icons";
 import Link from "next/link";
 
 export function Landing({ data }) {
@@ -18,7 +18,7 @@ export function Landing({ data }) {
         {
             title: 'اتحاد طلبة سوريا',
             img: '/images/logo-sar.png',
-        } ,
+        },
         {
             title: 'Middle East Academy',
             img: '/images/11.png',
@@ -48,16 +48,13 @@ export function Landing({ data }) {
                     <div className="row align-items-center position-relative">
                         <div className="col-lg-6">
                             <div className="hero-content">
-                                <h1 className="wow fadeInUp" data-wow-delay=".4s"> أبداع بلا حدود </h1>
+                                <h1 className="wow fadeInUp" data-wow-delay=".4s"> إبداع بلا حدود </h1>
                                 <p className="wow fadeInUp" data-wow-delay=".6s">
                                     برمجة وتصميم منتجات رقمية من الفكرة حتى ما بعد الوصول للمستخدم
                                 </p>
-                                <a
-                                    href="#"
-                                    className="main-btn border-btn btn-hover wow fadeInUp"
-                                    data-wow-delay=".6s"
-                                >تواصل معنا</a
-                                >
+                                <a href="https://wa.me/306998548153" className="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s" >
+                                    تواصل معنا
+                                </a>
                                 <a href="#service" className="scroll-bottom">
                                     <i className="lni lni-arrow-down"></i>
                                 </a>
@@ -204,6 +201,31 @@ function Service() {
                                 <h3>التسويق</h3>
                                 <p>
                                     حملات تسويقية فعالة: نساعدك في تصميم وتنفيذ حملات تسويقية رقمية ناجحة تصل إلى جمهورك المستهدف وتحقق أهدافك التسويقية. نستخدم أحدث التقنيات والأدوات لنقدم لك حملات فعالة وقابلة للقياس
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6">
+                        <div className="single-feature-extended">
+                            <div className="icon j box">
+                                <IconMicroController size={60} />
+                            </div>
+                            <div className="content box col  aitem">
+                                <h3>المتحكمات</h3>
+                                <p>
+                                    نحن نوفر خدمات برمجة وبناء المتحكمات والدارات الإلكترونية بأحدث التقنيات والمعايير. يمكننا تصميم وتطوير حلول مخصصة لتلبية احتياجاتك، سواء كانت في مجال الأتمتة الصناعية، أنظمة التحكم في الروبوتات، أو أجهزة IoT. باستخدام أساليب هندسية مبتكرة وتقنيات برمجية متقدمة، نضمن توفير منتجات موثوقة وفعالة تلبي تطلعاتك وتحقق أهدافك التقنية </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-6">
+                        <div className="single-feature-extended">
+                            <div className="icon j box">
+                                <IconInteriorDesign size={60} />
+                            </div>
+                            <div className="content box col  aitem">
+                                <h3>التصميم الداخلي</h3>
+                                <p>
+                                نحن نقدم خدمات تصميم داخلي مبتكرة ومتميزة لتحويل المساحات الداخلية إلى أماكن تعكس شخصيتك وتلبي احتياجاتك. سواء كنت تبحث عن تحسين تصميم منزلك أو مكتبك، أو تخطط لتصميم مساحة تجارية جديدة، فإن فريقنا من المصممين المحترفين يمتلك الخبرة والإبداع اللازمين لتحقيق رؤيتك. نحن نضمن تقديم حلول تصميمية تلبي تطلعاتك وتجسد أسلوب حياتك بأفضل شكل ممكن.
                                 </p>
                             </div>
                         </div>

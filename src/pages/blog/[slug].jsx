@@ -1,3 +1,4 @@
+import SEO from "@/theme/SEO";
 import Card from "@/theme/card";
 import { IconTag, Iconclock } from "@/theme/icons";
 import axios from "axios";
@@ -26,6 +27,8 @@ export default function PageOne({ data: propsData }) {
     let [data, setData] = useState(propsData)
     return (
         <div className="box col m-20 p-20 " style={{ maxWidth: '700px', margin: 'auto' }} >
+            <SEO title={data.title} description={data.des} image={data.image} />
+
             <img src={data?.image} alt={data?.title} style={{ borderRadius: '20px' }} />
 
             <h1 className="py-10">{data?.title}</h1>
@@ -35,8 +38,8 @@ export default function PageOne({ data: propsData }) {
                 <span className="mx-10">{data?.create_at}</span>
                 {/* icon cat */}
                 {data?.cat?.map(App => <Link href={`/blog/cat/${App}`} key={App} className="mx-10 box rows aitem">
-                    <IconTag size={20} /> 
-                    <p className="mx-10">{App}</p> 
+                    <IconTag size={20} />
+                    <p className="mx-10">{App}</p>
                 </Link>)}
             </div>
             <p className="p-10 my-10" style={{ backgroundColor: '#eee', borderRadius: '10px' }}>{data?.bio}</p>
