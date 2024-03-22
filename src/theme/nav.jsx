@@ -33,12 +33,13 @@ export function NavHeader({ links }) {
                                     <span className="toggler-icon"></span>
                                 </button>
                                 <Link className="navbar-brand mx-15" href="/">
-                                    <img src="/icons/logo.svg" alt="Logo"   />
+                                    <img src="/icons/logo.svg" alt="Logo" />
                                 </Link>
 
                                 <div
                                     className="collapse navbar-collapse sub-menu-bar"
                                     id="navbarSupportedContent"
+                                    onClick={() => document.querySelector(".sub-menu-bar.show").classList.toggle("show")}
                                 >
                                     <ul id="nav" className="navbar-nav ms-auto">
                                         {items}
