@@ -71,7 +71,7 @@ export default function AddPost({ data, config, query }) {
                     <button type="submit" style={{ width: '45%' }} >تحديث</button>
                 </div>
             </form>
-            <PageBlogOne data={view} />
+            {/* <PageBlogOne data={view} /> */}
         </div>
     )
 }
