@@ -38,7 +38,7 @@ export default function Posts(props) {
 	const columns = [
 		{
 			title: "الاسم", dataIndex: "title", key: "title",
-			render: (_, record) => <Link href={`/admin/posts/${record._id}/edit`} className="  w-50 box j" >{record.title}</Link>
+			render: (_, record) => <Link href={`/admin/posts/${record._id}`} className="  w-50 box j" >{record.title}</Link>
 		}, {
 			title: "التصنيف", dataIndex: "cat", key: "cat",
 			render: (_, record) => <>{record?.cat?.map(a => a)}</>

@@ -24,8 +24,7 @@ export default async function postOne(req, res, next) {
     PUT(
         await Auth.isLogin(),
         async () => {
-            // types
-
+            // types 
             await Posts.updateOne(id, body)
             Send({ msg: "تم تحديث المنشور" })
         })

@@ -1,41 +1,13 @@
 import SEO from "@/theme/SEO";
 import Card from "@/theme/card";
-import { IconTag, Iconclock } from "@/theme/icons";
-import axios from "axios";
+import { IconTag, Iconclock } from "@/theme/icons"; 
 import MarkdownIt from 'markdown-it'
 import Link from "next/link";
 import { useState } from "react";
-
-
-
-export async function getServerSideProps(ctx) {
-    let api = `${process.env.NEXT_PUBLIC_API}/client/posts`
-    let { data } = await axios.get(`${api}/${encodeURI(ctx.params.slug)}`);
-    // let { data } = await axios.get(url, config);
-
-    return { props: { data, query: ctx.query } }
-
-}
-// export async function getStaticPaths() {
-//     let api = `${process.env.NEXT_PUBLIC_API}/client/posts`
-//     let { data } = await axios.get(`${api}`);
-//     let paths = data.map(App => ({ params: { slug: App.url } }))
-//     return { paths, fallback: true }
-// }
-
-// // get static props
-// export async function getStaticProps(ctx) {
-//     let api = `${process.env.NEXT_PUBLIC_API}/client/posts`
-//     let { data } = await axios.get(`${api}/${encodeURI(ctx.params.slug)}`);
-//     // let md = new MarkdownIt()
-//     // data.content = md.render(data.content || " ")
-//     // data.create_at = new Date(data?.create_at).toDateString()
-//     return { props: { data }, revalidate: 1 }
-// }
-
-export default function PageOne({ data: propsData }) {
+ 
+export default function PageBlogOne({ data: propsData }) {
     let [data, setData] = useState(propsData)
-
+    
     let md = new MarkdownIt()
     data.content = md.render(data.content || " ")
     data.create_at = new Date(data?.create_at).toDateString()
