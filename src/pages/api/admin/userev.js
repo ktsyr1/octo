@@ -9,7 +9,12 @@ export default async function posts(req, res, next) {
         async () => {
             // types
             let posts = await Userev.find().sort({ _id: -1 })
-            Send(posts)
+            res.setHeader('Content-Type', 'application/json')
+            res.setHeader('Access-Control-Allow-Origin', "*")
+            res.setHeader('Access-Control-Allow-Credentials', true);
+            res.setHeader('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept');
+
+            res.status(200).json(posts)
 
         })
     POST(
@@ -21,7 +26,12 @@ export default async function posts(req, res, next) {
                 fullName: req.body.fullName,
                 phoneNumber: req.body.phoneNumber
             })
-            Send(posts)
+            res.setHeader('Content-Type', 'application/json')
+            res.setHeader('Access-Control-Allow-Origin', "*")
+            res.setHeader('Access-Control-Allow-Credentials', true);
+            res.setHeader('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept');
+
+            res.status(200).json(posts)
 
         })
 
