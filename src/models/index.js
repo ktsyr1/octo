@@ -29,3 +29,7 @@ export const Menu = menu
 
 import certificates from "@/models/Certificates";
 export const Certificates = certificates
+
+import userev from "@/models/userev";
+export const Userev = userev
+
